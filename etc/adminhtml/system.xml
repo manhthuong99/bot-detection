@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="bot_detection" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>BOT Detection</label>
+			<tab>service</tab>
+			<resource>Eric_BotDetection::BotDetection</resource>
+			<group id="action" sortOrder="10" showInDefault="1" translate="label">
+				<label>Detect IP Actions</label>
+				<field id="enabled" type="select" sortOrder="10" showInDefault="1" translate="label">
+					<label>Enabled</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="maximum_requests" type="text" sortOrder="20" showInDefault="1" translate="label">
+					<label>Maximum Requests</label>
+					<comment>Maximum number of requests at a time</comment>
+				</field>
+				<field id="time_limit" type="text" sortOrder="30" showInDefault="1" translate="label">
+					<label>Time Limit (second)</label>
+				</field>
+				<field id="black_list" type="textarea" sortOrder="40" showInDefault="1" translate="label">
+					<label>Black List</label>
+				</field>
+			</group>
+			<group id="billing" sortOrder="20" showInDefault="1" translate="label">
+				<label>Detect IP Billing Address</label>
+				<field id="enabled" type="select" sortOrder="10" showInDefault="1" translate="label">
+					<label>Enabled</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="message" type="text" sortOrder="20" showInDefault="1" translate="label">
+					<label>Message</label>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
